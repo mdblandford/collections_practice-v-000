@@ -1,5 +1,5 @@
-def sort_array_asc(integer)
-  integer.sort {|a,b| a<=>b}
+def sort_array_asc(array)
+  array.sort {|a,b| a<=>b}
 end
 
 def sort_array_desc(integer)
@@ -34,7 +34,7 @@ end
 
 def add_s(array)
   array.map.with_index do |word,index|
-    if index != 1 
+    if index != 1
       word << "s"
     else
       word
