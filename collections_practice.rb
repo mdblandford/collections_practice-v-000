@@ -1,13 +1,13 @@
-def sort_array_asc(integer)
-  integer.sort {|a,b| a<=>b}
+def sort_array_asc(array)
+  array.sort {|a,b| a<=>b}
 end
 
-def sort_array_desc(integer)
-  integer.sort! {|a,b| b<=>a}
+def sort_array_desc(array)
+  array.sort! {|a,b| b<=>a}
 end
 
-def sort_array_char_count(string)
-  string.sort {|a,b| a.length<=>b.length}
+def sort_array_char_count(array)
+  array.sort {|a,b| a.length<=>b.length}
 end
 
 def swap_elements(array)
@@ -33,11 +33,5 @@ def sum_array(array)
 end
 
 def add_s(array)
-  array.map.with_index do |word,index|
-    if index != 1 
-      word << "s"
-    else
-      word
-    end
-  end
+  array.map.with_index {|word,index| index != 1 ? word << "s" : word}
 end
