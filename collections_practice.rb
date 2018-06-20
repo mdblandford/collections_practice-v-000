@@ -33,11 +33,5 @@ def sum_array(array)
 end
 
 def add_s(array)
-  array.map.with_index do |word,index|
-    if index != 1
-      word << "s"
-    else
-      word
-    end
-  end
+  array.map.with_index {|word,index| index != 1 ? word << "s" : word}
 end
